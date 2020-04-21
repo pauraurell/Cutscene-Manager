@@ -9,7 +9,15 @@ Hi, I'm [Pau Raurell](https://github.com/pauraurell) and welcome to my Cutscene 
 
 # What is a cutscene?
 
-# Types of cutscenes
+By definition, a cutscene is a not interactive sequence in a video game that breaks up the gameplay. Cutscenes are used to show conversations between characters, set the mood, reward the player, introduce new gameplay elements, show the effects of a player's actions... Although the definition says that cutscenes are not interactive, nowadays we see a lot of videogames with quick time events which basically are cutscenes where the player has to press buttons to continue the scene. 
+
+# Types of cutscene
+
+We can divide cutscenes in three types: Pre-rendered, Real time and Live-action cutscenes.
+
+### Live-action cutscenes
+
+
 
 # Exercise
 Here are some TODO's:
