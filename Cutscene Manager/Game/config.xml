@@ -1,0 +1,39 @@
+<!-- Config file for the game -->
+
+<config>
+   <app framerate_cap="60">
+    <title>Game Development Testbed</title>
+    <organization>UPC</organization>
+  </app>
+	
+  <renderer>
+    <vsync value="false"/>
+  </renderer>
+
+  <window>
+    <resolution width="1080" height="680" scale="1"/>
+    <fullscreen value="false"/>
+    <borderless value="false"/>
+    <resizable value="false"/>
+    <fullscreen_window value="false"/>
+  </window>
+
+ 
+  <audio>
+   
+  </audio>
+  
+  <file_system>
+    <path>data.zip</path>
+  </file_system>
+
+  <map>
+    <folder>Assets/textures/maps/</folder>
+  </map>
+  
+  <scene>
+    <map name="maplevel1.tmx"/>
+  </scene>
+
+
+</config>
