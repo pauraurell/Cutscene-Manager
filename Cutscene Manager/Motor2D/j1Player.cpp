@@ -38,8 +38,7 @@ bool j1Player::PreUpdate(float dt)
 
 bool j1Player::Update(float dt)
 {
-
-	if (App->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT) 
+	if (App->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT)
 	{
 		position.x -= 3;
 	}
@@ -48,10 +47,10 @@ bool j1Player::Update(float dt)
 	{
 		position.x += 3;
 	}
-	
+
 	if (App->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT)
 	{
-		position.y -= 3;	
+		position.y -= 3;
 	}
 
 	else if (App->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT)

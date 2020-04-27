@@ -46,14 +46,9 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	bool Load(pugi::xml_node&);
-	bool Save(pugi::xml_node&) const;
+	// Check camera and player limits
+	void SceneLimits();
 
-	void CreateScene(scenes next_scene);
-	bool CreateInGame();
-
-private:
-	scenes current_scene;
 
 public:
 	p2SString current_level;

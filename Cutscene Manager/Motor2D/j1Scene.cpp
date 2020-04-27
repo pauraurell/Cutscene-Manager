@@ -40,10 +40,8 @@ bool j1Scene::Awake(pugi::xml_node& config)
 // Called before the first frame
 bool j1Scene::Start()
 {
-
 	LOG("Start scene");
 
-	current_scene = scenes::ingame;
 	current_level = "map.tmx";
 	map_coordinates = { 0, 0 };
 
@@ -61,36 +59,20 @@ bool j1Scene::PreUpdate(float dt)
 // Called each loop iteration
 bool j1Scene::Update(float dt)
 {
-	
-	switch (current_scene) 
-	{
-	
-	case scenes::ingame:
-		int x, y;
-		App->input->GetMousePosition(x, y);
+	int x, y;
+	App->input->GetMousePosition(x, y);
 
-		mouse_position = App->render->ScreenToWorld(x, y);
+	mouse_position = App->render->ScreenToWorld(x, y);
 
-		//Camera following the player
-		App->render->camera.x = -App->player->position.x + App->win->width / 2;
-		App->render->camera.y = -App->player->position.y + App->win->height / 2;
+	//Camera following the player and limits
+	App->render->camera.x = -App->player->position.x + App->win->width / 2;
+	App->render->camera.y = -App->player->position.y + App->win->height / 2;
+	SceneLimits();
 
+	//Draw the map
+	App->map->Draw();
+	map_coordinates = App->map->WorldToMap(mouse_position.x, mouse_position.y);
 
-		//Camera Limits
-		if (App->render->camera.x > 0) { App->render->camera.x = 0; }
-		int camera_limit_x = (-1 * App->map->data.width * App->map->data.tile_width) + App->render->camera.w;
-		if (App->render->camera.x < camera_limit_x) { App->render->camera.x = camera_limit_x; }
-
-		if (App->render->camera.y > 0) { App->render->camera.y = 0; }
-		int camera_limit_y = (-1 * App->map->data.height * App->map->data.tile_height) + App->render->camera.h;
-		if (App->render->camera.y < camera_limit_y) { App->render->camera.y = camera_limit_y; }
-	
-
-		//Draw the map
-		App->map->Draw();
-		map_coordinates = App->map->WorldToMap(mouse_position.x, mouse_position.y);
-	}
-	
 	return true;
 }
 
@@ -109,22 +91,28 @@ bool j1Scene::CleanUp()
 
 	return true;
 }
-bool j1Scene::Load(pugi::xml_node& data)
+
+void j1Scene::SceneLimits()
 {
-	LOG("Loading Scene state");
-	return true;
-}
+	//Camera Limits
+	iPoint camera_limit;
+	camera_limit.x = (-1 * App->map->data.width * App->map->data.tile_width) + App->render->camera.w;
+	camera_limit.y = (-1 * App->map->data.height * App->map->data.tile_height) + App->render->camera.h;
 
-// Save Game State
-bool j1Scene::Save(pugi::xml_node& data) const
-{
-	LOG("Saving Scene state");
-	
+	if (App->render->camera.x > 0) { App->render->camera.x = 0; }
+	else if (App->render->camera.x < camera_limit.x) { App->render->camera.x = camera_limit.x; }
+	if (App->render->camera.y > 0) { App->render->camera.y = 0; }
+	else if (App->render->camera.y < camera_limit.y) { App->render->camera.y = camera_limit.y; }
 
-	pugi::xml_node scene = data.append_child("scenename");
-	scene.append_attribute("name") = current_level.GetString();
+	//Player Limits
+	iPoint player_limit;
+	player_limit.x = App->map->data.width * App->map->data.tile_width - 32;
+	player_limit.y = App->map->data.height * App->map->data.tile_height - 48;
 
-	return true;
+	if (App->player->position.x < 0) { App->player->position.x = 0; }
+	else if (App->player->position.x > player_limit.x) { App->player->position.x = player_limit.x; }
+	if (App->player->position.y < 0) { App->player->position.y = 0; }
+	else if (App->player->position.y > player_limit.y) { App->player->position.y = player_limit.y; }
 }
 
 
