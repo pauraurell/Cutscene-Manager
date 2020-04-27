@@ -19,6 +19,7 @@ class j1Audio;
 class j1Scene;
 class j1Map;
 class j1Player;
+class j1CutsceneManager;
 
 
 class j1App
@@ -56,7 +57,6 @@ public:
 	void SaveGame() const;
 	void GetSaveGames(list<p2SString>& list_to_fill) const;
 
-
 	bool Pause();
 	bool GetPause();
 
@@ -85,18 +85,19 @@ private:
 	// Load / Save
 	bool LoadGameNow();
 	bool SavegameNow();
+
 public:
 
 	// Modules
-	j1Window*			win;
-	j1Input*			input;
-	j1Render*			render;
-	j1Textures*			tex;
-	j1Audio*			audio;
-	j1Scene*			scene;
-	j1Map*				map;
-	j1Player*			player;
-	
+	j1Window* win;
+	j1Input* input;
+	j1Render* render;
+	j1Textures* tex;
+	j1Audio* audio;
+	j1Scene* scene;
+	j1Map* map;
+	j1Player* player;
+	j1CutsceneManager* cutscene_manager;
 
 	uint32				framerate = 0u;
 	pugi::xml_document	config_file;
@@ -112,7 +113,7 @@ private:
 	list<j1Module*>		modules;
 	uint				frames;
 	int					argc;
-	char**				args;
+	char** args;
 
 	p2SString			title;
 	p2SString			organization;
@@ -137,6 +138,6 @@ public:
 	bool				quitGame = false;
 };
 
-extern j1App* App; 
+extern j1App* App;
 
 #endif
