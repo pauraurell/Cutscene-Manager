@@ -2,7 +2,6 @@
 #define __j1SCENE_H__
 
 #include "j1Module.h"
-#include "Animation.h"
 #include "p2Point.h"
 #include "SDL/include/SDL.h"
 #include "j1Timer.h"
@@ -11,13 +10,6 @@
 #define COORDS(a) a+3000 
 
 struct SDL_Texture;
-
-enum class scenes 
-{
-	ingame,
-};
-
-class GuiItem;
 
 class j1Scene : public j1Module
 {

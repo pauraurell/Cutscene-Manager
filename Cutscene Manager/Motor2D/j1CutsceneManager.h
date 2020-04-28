@@ -5,14 +5,19 @@
 #include "p2Point.h"
 #include "SDL/include/SDL.h"
 
+enum BlackBarsFases
+{
+	None,
+	FadeIn,
+	Drawing,
+	FadeOut
+};
 
 class j1CutsceneManager : public j1Module
 {
 public:
 
 	j1CutsceneManager();
-
-	// Destructor
 	virtual ~j1CutsceneManager();
 
 	// Called before render is available
@@ -21,34 +26,26 @@ public:
 	// Called before the first frame
 	bool Start();
 
-	// Called before all Updates
+	// Called each loop iteration
 	bool PreUpdate(float dt);
 
-	// Called each loop iteration
 	bool Update(float dt);
 
-	// Called before all Updates
 	bool PostUpdate(float dt);
 
 	// Called before quitting
 	bool CleanUp();
 
+	//-------------Black Bars Functions-------------//
 	void BlackBars_FadeIn();
 	void BlackBars_Draw();
 	void BlackBars_FadeOut();
 
 private:
+
+	//-------------Black Bars Variables-------------//
 	int alpha;
 	SDL_Rect top_rect, down_rect;
-
-	enum BlackBarsFases 
-	{
-		None,
-		FadeIn,
-		Drawing,
-		FadeOut
-	};
-
 	BlackBarsFases fase;
 };
 
