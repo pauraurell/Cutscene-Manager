@@ -55,14 +55,22 @@ bool j1CutsceneManager::Update(float dt)
 
 	switch (fase)
 	{
-		case Drawing: BlackBars_Draw();
-	
+		case FadeIn: 
+			BlackBars_FadeIn();
+			break;
+		case Drawing:
+			BlackBars_Draw();
+			break;
+		case FadeOut:
+			BlackBars_FadeOut();
+			break;
 	}
 
 
 	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
 	{
-		fase = Drawing;
+		if (fase == None) { fase = FadeIn; }
+		else if (fase == Drawing) { fase = FadeOut; }
 	}
 
 	return true;
@@ -85,14 +93,10 @@ bool j1CutsceneManager::CleanUp()
 
 void j1CutsceneManager::BlackBars_FadeIn()
 {
-	/*SDL_Rect top_rect, down_rect;
-	int bar_height = 100;
 	alpha += 3;
-	top_rect.x = 0; top_rect.y = 0; top_rect.w = App->win->width; top_rect.h = bar_height;
-	down_rect.x = 0; down_rect.y = App->win->height - bar_height; down_rect.w = App->win->width; down_rect.h = bar_height;
 	App->render->DrawQuad(top_rect, 0, 0, 0, alpha, true, false);
 	App->render->DrawQuad(down_rect, 0, 0, 0, alpha, true, false);
-	if (alpha >= 255) { alpha = 255; }*/
+	if (alpha >= 255) { alpha = 255;   fase = Drawing; }
 }
 
 void j1CutsceneManager::BlackBars_Draw()
@@ -100,4 +104,12 @@ void j1CutsceneManager::BlackBars_Draw()
 	alpha = 255;
 	App->render->DrawQuad(top_rect, 0, 0, 0, alpha, true, false);
 	App->render->DrawQuad(down_rect, 0, 0, 0, alpha, true, false);
+}
+
+void j1CutsceneManager::BlackBars_FadeOut()
+{
+	alpha -= 3;
+	App->render->DrawQuad(top_rect, 0, 0, 0, alpha, true, false);
+	App->render->DrawQuad(down_rect, 0, 0, 0, alpha, true, false);
+	if (alpha <= 0) { alpha = 0; fase = None; }
 }

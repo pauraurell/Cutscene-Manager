@@ -35,6 +35,7 @@ public:
 
 	void BlackBars_FadeIn();
 	void BlackBars_Draw();
+	void BlackBars_FadeOut();
 
 private:
 	int alpha;
