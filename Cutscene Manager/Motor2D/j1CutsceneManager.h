@@ -33,6 +33,22 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
+	void BlackBars_FadeIn();
+	void BlackBars_Draw();
+
+private:
+	int alpha;
+	SDL_Rect top_rect, down_rect;
+
+	enum BlackBarsFases 
+	{
+		None,
+		FadeIn,
+		Drawing,
+		FadeOut
+	};
+
+	BlackBarsFases fase;
 };
 
 #endif // __j1SCENE_H__
