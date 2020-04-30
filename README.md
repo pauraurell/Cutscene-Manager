@@ -59,7 +59,9 @@ This type of cutscenes are scenes that are already loaded and rendered when the 
 **Cons:** 
 
 -Due to that high quality, a pre-rendered cutscene file usually has a large size. 
+
 -Disonance with the gameplay.
+
 -As it is pre-rendered, the cosmetic modifications in the characters won't be seen (the cutscene will be always the same).
 
 ### Real time cutscenes
@@ -79,13 +81,14 @@ In the real time cutscenes, what the player sees is being rendered in that momen
 **Pros:** 
 
 -There is no disonance between the gameplay and the cutscene and feels fluid.
+
 -Visible cosmetic changes.
+
 -Saves a lot of space. 
 
 **Cons:** 
 
--Due to that high quality, a pre-rendered cutscene file usually has a large size. 
--Disonance with the gameplay.
+-Technical limitations. 
 
 
 ### Interactive cutscenes
@@ -96,9 +99,9 @@ Quick time events are a type of cutscene where the player has to press a button 
 *Shadow of the Tomb Raider* 
 
 
-
-
 # How are cutscenes made?
+
+
 
 # Exercise
 Here are some TODO's:
