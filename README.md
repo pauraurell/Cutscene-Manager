@@ -19,32 +19,43 @@ We can divide cutscenes in three types: Pre-rendered, Real time and Live-action 
 
 This type of cutscenes are the less common nowadays and they are basicaly videos recorded in the real live with actors, the same as films. Back at the days these cutscenes were the best way of explaining the story of a game and were a great innovation but nowadays it's really rare to find one of this type in a video game.
 
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ![Live action](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Live-Action%20Cutscene%20Mark%20Hamill.gif?raw=true)
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Wing Commander IV*
+![Live action](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Live-Action%20Cutscene%20Mark%20Hamill.gif?raw=true)
+*Wing Commander IV*
 
 
 ### Pre-rendered cutscenes
 
 This type of cutscenes are scenes that are already loaded and rendered when the player is seeing them. They can be made with the game engine or, the most common way, with external software. 
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Battlefront%202%20pre-rendered%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Star Wars Battlefront II*
 
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Attila%20Total%20War%20pre-rendered%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Total War: Attila*
+![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Battlefront%202%20pre-rendered%20cutscene.gif?raw=true)
 
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/The%20Force%20Unleashed%202%20pre-rendered%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Star Wars The Force Unleashed II*
+*Star Wars Battlefront II*
 
+![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Attila%20Total%20War%20pre-rendered%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Total War: Attila*
+
+![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/The%20Force%20Unleashed%202%20pre-rendered%20cutscene.gif?raw=true)
+
+*Star Wars The Force Unleashed II*
 
 
 ### Real time cutscenes
 
-In the real time cutscenes, what the player sees is being rendered in that moment and obviously these type of cutscenes are made with the game engine.&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp
+In the real time cutscenes, what the player sees is being rendered in that moment and obviously these type of cutscenes are made with the game engine.&nbsp;
  
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Red%20Dead%20Redemption%202%20real%20time%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Red Dead Redemption 2*
+![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Red%20Dead%20Redemption%202%20real%20time%20cutscene.gif?raw=true)
 
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Uncharted%204%20real%20time%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Uncharted 4*
+*Red Dead Redemption 2*
+
+![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Uncharted%204%20real%20time%20cutscene.gif?raw=true)
+
+*Uncharted 4*
 
 ### Interactive cutscenes
 Quick time events are a type of cutscene where the player has to press a button or a sequence of buttons to do a concrete action.
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;![interactive](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Shadow%20of%20The%20Tomb%20Raider%20interactive%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Shadow of the Tomb Raider* 
+
+![interactive](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Shadow%20of%20The%20Tomb%20Raider%20interactive%20cutscene.gif?raw=true)
+
+*Shadow of the Tomb Raider* 
 
 
 ## Pros and cons
