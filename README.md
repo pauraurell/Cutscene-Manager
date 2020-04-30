@@ -23,6 +23,15 @@ This type of cutscenes are the less common nowadays and they are basicaly videos
 
 *Wing Commander IV*
 
+**Pros:** 
+
+-You don't have to worry about technical limitations of a CPU.
+
+**Cons:** 
+
+-High disonance with the gameplay.
+
+
 
 ### Pre-rendered cutscenes
 
@@ -43,6 +52,16 @@ This type of cutscenes are scenes that are already loaded and rendered when the 
 *Star Wars The Force Unleashed II*
 
 
+**Pros:** 
+
+-You don't have to worry about technical limitations of a CPU, that means that there can be high quality textures, a lot of particles and visual effects, cooler animations... In conclusion, better graphics.
+
+**Cons:** 
+
+-Due to that high quality, a pre-rendered cutscene file usually has a large size. 
+-Disonance with the gameplay.
+-As it is pre-rendered, the cosmetic modifications in the characters won't be seen (the cutscene will be always the same).
+
 ### Real time cutscenes
 
 In the real time cutscenes, what the player sees is being rendered in that moment and obviously these type of cutscenes are made with the game engine.&nbsp;
@@ -56,6 +75,19 @@ In the real time cutscenes, what the player sees is being rendered in that momen
 
 *Uncharted 4*
 
+
+**Pros:** 
+
+-There is no disonance between the gameplay and the cutscene and feels fluid.
+-Visible cosmetic changes.
+-Saves a lot of space. 
+
+**Cons:** 
+
+-Due to that high quality, a pre-rendered cutscene file usually has a large size. 
+-Disonance with the gameplay.
+
+
 ### Interactive cutscenes
 Quick time events are a type of cutscene where the player has to press a button or a sequence of buttons to do a concrete action.
 
@@ -64,13 +96,7 @@ Quick time events are a type of cutscene where the player has to press a button 
 *Shadow of the Tomb Raider* 
 
 
-## Pros and cons
 
-### Live-action cutscenes
-
-### Pre-rendered cutscenes
-
-### Real time cutscenes
 
 # How are cutscenes made?
 
