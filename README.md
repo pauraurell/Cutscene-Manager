@@ -20,6 +20,7 @@ We can divide cutscenes in three types: Pre-rendered, Real time and Live-action 
 This type of cutscenes are the less common nowadays and they are basicaly videos recorded in the real live with actors, the same as films. Back at the days these cutscenes were the best way of explaining the story of a game and were a great innovation but nowadays it's really rare to find one of this type in a video game.
 
 ![Live action](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Live-Action%20Cutscene%20Mark%20Hamill.gif?raw=true)
+
 *Wing Commander IV*
 
 
@@ -31,7 +32,11 @@ This type of cutscenes are scenes that are already loaded and rendered when the 
 
 *Star Wars Battlefront II*
 
-![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Attila%20Total%20War%20pre-rendered%20cutscene.gif?raw=true)&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; *Total War: Attila*
+
+![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Attila%20Total%20War%20pre-rendered%20cutscene.gif?raw=true)
+
+*Total War: Attila*
+
 
 ![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/The%20Force%20Unleashed%202%20pre-rendered%20cutscene.gif?raw=true)
 
@@ -44,7 +49,8 @@ In the real time cutscenes, what the player sees is being rendered in that momen
  
 ![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Red%20Dead%20Redemption%202%20real%20time%20cutscene.gif?raw=true)
 
-*Red Dead Redemption 2*
+***Red Dead Redemption 2***
+
 
 ![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Uncharted%204%20real%20time%20cutscene.gif?raw=true)
 
