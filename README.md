@@ -17,7 +17,27 @@ We can divide cutscenes in three types: Pre-rendered, Real time and Live-action 
 
 ### Live-action cutscenes
 
+This type of cutscenes are the less common nowadays and they are basicaly videos recorded in the real live with actors, the same as films. Back at the days these cutscenes were the best way of explaining the story of a game and were a great innovation but nowadays it's really rare to find one of this type in a video game.
 
+ ![Live action](https://github.com/Va1-Ha11-A/Proyecto-II/blob/master/docs/Gifs/Live-Action Cutscene Mark Hamill.gif?raw=true)
+
+### Pre-rendered cutscenes
+
+This type of cutscenes are scenes that are already loaded and rendered when the player is seeing them. They can be made with the game engine or, the most common way, with external software. 
+
+### Real time cutscenes
+
+In the real time cutscenes, what the player sees is being rendered in that moment and obviously these type of cutscenes are made with the game engine.
+
+## Pros and cons
+
+### Live-action cutscenes
+
+### Pre-rendered cutscenes
+
+### Real time cutscenes
+
+# How are cutscenes made?
 
 # Exercise
 Here are some TODO's:
