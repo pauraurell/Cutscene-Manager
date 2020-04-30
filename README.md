@@ -49,7 +49,7 @@ In the real time cutscenes, what the player sees is being rendered in that momen
  
 ![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Red%20Dead%20Redemption%202%20real%20time%20cutscene.gif?raw=true)
 
-***Red Dead Redemption 2***
+*Red Dead Redemption 2*
 
 
 ![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Uncharted%204%20real%20time%20cutscene.gif?raw=true)
