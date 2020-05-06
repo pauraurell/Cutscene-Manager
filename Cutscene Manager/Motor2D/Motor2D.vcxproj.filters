@@ -3,9 +3,6 @@
   <ItemGroup>
     <ClCompile Include="j1Main.cpp" />
     <ClCompile Include="j1App.cpp" />
-    <ClCompile Include="j1Timer.cpp">
-      <Filter>Tools</Filter>
-    </ClCompile>
     <ClCompile Include="j1Audio.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
@@ -33,22 +30,22 @@
     <ClCompile Include="j1Map.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
-    <ClCompile Include="j1Player.cpp">
-      <Filter>Scenes</Filter>
+    <ClCompile Include="j1PerfTimer.cpp">
+      <Filter>Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="j1Timer.cpp">
+      <Filter>Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="j1CutsceneCharacters.cpp">
+      <Filter>Cutscene Manager\Characters</Filter>
     </ClCompile>
     <ClCompile Include="j1CutsceneManager.cpp">
-      <Filter>Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="j1PerfTimer.cpp">
-      <Filter>Tools</Filter>
+      <Filter>Cutscene Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="j1App.h" />
     <ClInclude Include="j1Module.h" />
-    <ClInclude Include="j1Timer.h">
-      <Filter>Tools</Filter>
-    </ClInclude>
     <ClInclude Include="j1Audio.h">
       <Filter>Tools</Filter>
     </ClInclude>
@@ -88,14 +85,17 @@
     <ClInclude Include="j1Map.h">
       <Filter>Tools</Filter>
     </ClInclude>
-    <ClInclude Include="j1Player.h">
-      <Filter>Scenes</Filter>
+    <ClInclude Include="j1PerfTimer.h">
+      <Filter>Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="j1Timer.h">
+      <Filter>Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="j1CutsceneCharacters.h">
+      <Filter>Cutscene Manager\Characters</Filter>
     </ClInclude>
     <ClInclude Include="j1CutsceneManager.h">
-      <Filter>Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="j1PerfTimer.h">
-      <Filter>Tools</Filter>
+      <Filter>Cutscene Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -111,5 +111,19 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{0ab22843-7b8f-4adc-b6ce-c63d1df4131a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Timers">
+      <UniqueIdentifier>{88c3b6c1-df24-4c9f-b3ea-fa7838b34b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cutscene Manager">
+      <UniqueIdentifier>{a8eba85a-76df-4ba4-b917-0e580813481a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cutscene Manager\Characters">
+      <UniqueIdentifier>{74a1b0c1-a7d6-48c4-9420-7c920498faeb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Game\CutsceneEditor.xml">
+      <Filter>Cutscene Manager</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

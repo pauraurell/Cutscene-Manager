@@ -12,7 +12,7 @@
 #include "j1Scene.h"
 #include "j1Map.h"
 #include "j1App.h"
-#include "j1Player.h"
+#include "j1CutsceneCharacters.h"
 #include "j1CutsceneManager.h"
 
 
@@ -31,7 +31,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	audio = new j1Audio();
 	scene = new j1Scene();
 	map = new j1Map();
-	player = new j1Player();
+	characters = new j1CutsceneCharacters();
 	cutscene_manager = new j1CutsceneManager();
 
 
@@ -43,8 +43,9 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(audio);
 	AddModule(map);
 	AddModule(scene);
-	AddModule(player);
 	AddModule(cutscene_manager);
+	AddModule(characters);
+
 
 	// render last to swap buffer
 	AddModule(render);
@@ -213,8 +214,9 @@ void j1App::FinishUpdate()
 
 	static char title[256];
 
-	sprintf_s(title, 256, "Cutscene Manager   ||   FPS: %i   ||   Player Position: (%i, %i)",
-	prev_last_sec_frame_count, App->player->position.x, App->player->position.y);
+	sprintf_s(title, 256, "Cutscene Manager   ||   FPS: %i   ||   Player Position: (%i, %i)   ||   C1 Position : (% i, % i)   ||   C2 Position : (% i, % i)",
+	prev_last_sec_frame_count, App->characters->player_pos.x, App->characters->player_pos.y, App->characters->character1_pos.x, 
+		App->characters->character1_pos.y, App->characters->character2_pos.x, App->characters->character2_pos.y);
 
 
 	App->win->SetTitle(title);

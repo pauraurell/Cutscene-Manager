@@ -10,8 +10,6 @@
 #include "PugiXml\src\pugixml.hpp"
 
 class j1App;
-class UI;
-class GuiItem;
 
 class j1Module
 {
@@ -71,7 +69,6 @@ public:
 		return true;
 	}
 
-	virtual void GuiInput(GuiItem*) {}
 
 public:
 

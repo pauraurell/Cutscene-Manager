@@ -8,8 +8,8 @@
 #include "j1Window.h"
 #include "j1Map.h"
 #include "j1Scene.h"
-#include "j1Player.h"
-
+#include "j1CutsceneCharacters.h"
+#include "j1CutsceneManager.h"
 
 j1Scene::j1Scene() : j1Module()
 {
@@ -61,17 +61,41 @@ bool j1Scene::Update(float dt)
 {
 	int x, y;
 	App->input->GetMousePosition(x, y);
-
 	mouse_position = App->render->ScreenToWorld(x, y);
 
+	iPoint player = App->characters->player_pos;
+
 	//Camera following the player and limits
-	App->render->camera.x = -App->player->position.x + App->win->width / 2;
-	App->render->camera.y = -App->player->position.y + App->win->height / 2;
+	App->render->camera.x = -player.x + App->win->width / 2;
+	App->render->camera.y = -player.y + App->win->height / 2;
 	SceneLimits();
 
 	//Draw the map
 	App->map->Draw();
 	map_coordinates = App->map->WorldToMap(mouse_position.x, mouse_position.y);
+
+	if (App->input->GetKey(SDL_SCANCODE_F1) == KEY_DOWN)
+	{
+		App->cutscene_manager->StartCutscene("test1");
+	}
+
+	else if (App->input->GetKey(SDL_SCANCODE_F2) == KEY_DOWN)
+	{
+		App->cutscene_manager->StartCutscene("test2");
+	}
+
+	else if (App->input->GetKey(SDL_SCANCODE_F3) == KEY_DOWN)
+	{
+		App->cutscene_manager->StartCutscene("test3");
+	}
+
+	if (player.x > 230 && player.x < 265) 
+	{
+		if (player.y > 515 && player.y < 570)
+		{
+			App->cutscene_manager->StartCutscene("test2");
+		}
+	}
 
 	return true;
 }
@@ -105,14 +129,14 @@ void j1Scene::SceneLimits()
 	else if (App->render->camera.y < camera_limit.y) { App->render->camera.y = camera_limit.y; }
 
 	//Player Limits
-	iPoint player_limit;
+	/*iPoint player_limit;
 	player_limit.x = App->map->data.width * App->map->data.tile_width - 32;
 	player_limit.y = App->map->data.height * App->map->data.tile_height - 48;
 
-	if (App->player->position.x < 0) { App->player->position.x = 0; }
-	else if (App->player->position.x > player_limit.x) { App->player->position.x = player_limit.x; }
-	if (App->player->position.y < 0) { App->player->position.y = 0; }
-	else if (App->player->position.y > player_limit.y) { App->player->position.y = player_limit.y; }
+	if (App->characters->player.x < 0) { App->characters->player.x = 0; }
+	else if (App->characters->player.x > player_limit.x) { App->characters->player.x = player_limit.x; }
+	if (App->characters->player.y < 0) { App->characters->player.y = 0; }
+	else if (App->characters->player.y > player_limit.y) { App->characters->player.y = player_limit.y; }*/
 }
 
 

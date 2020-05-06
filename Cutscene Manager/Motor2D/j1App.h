@@ -18,7 +18,7 @@ class j1Textures;
 class j1Audio;
 class j1Scene;
 class j1Map;
-class j1Player;
+class j1CutsceneCharacters;
 class j1CutsceneManager;
 
 
@@ -96,7 +96,7 @@ public:
 	j1Audio* audio;
 	j1Scene* scene;
 	j1Map* map;
-	j1Player* player;
+	j1CutsceneCharacters* characters;
 	j1CutsceneManager* cutscene_manager;
 
 	uint32				framerate = 0u;
