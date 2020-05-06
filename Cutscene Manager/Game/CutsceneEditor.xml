@@ -14,7 +14,7 @@
       objective="player" x="834" y="-50" vel_x="2" vel_y="2">
     </step>
     <step
-      objective="character1" x="1200" y="526" vel_x="2" vel_y="2">
+      objective="character1" x="1400" y="526" vel_x="2" vel_y="2">
     </step>
 
   </cutscene>
@@ -63,6 +63,25 @@
     </step>
     <step
       objective="player" x="500" y="700" vel_x="2" vel_y="4">
+    </step>
+  </cutscene>
+
+  <cutscene
+     name="test4">
+    <step
+      objective="camera" x="-300" y="-550" vel_x="1" vel_y="2">
+    </step>
+    <step
+      objective="camera" x="600" y="100" vel_x="2" vel_y="3">
+    </step>
+    <step
+      objective="camera" x="300" y="500" vel_x="1" vel_y="1">
+    </step>
+    <step
+      objective="camera" x="100" y="200" vel_x="3" vel_y="2">
+    </step>
+    <step
+      objective="camera" x="500" y="700" vel_x="2" vel_y="4">
     </step>
   </cutscene>
 

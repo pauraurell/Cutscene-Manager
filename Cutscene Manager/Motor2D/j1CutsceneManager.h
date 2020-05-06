@@ -79,13 +79,15 @@ public:
 	//Update positions
 	void Movement(Step& step, iPoint& objective_position);
 
+
 	//Pass to the next step of the cutsecne
 	void UpdateStep(CutsceneObject& character);
 
 	//Finish the cutscene
 	void FinishCutscene(CutsceneObject& character);
 
-
+	void CameraMovement(Step& step);
+	
 public:
 
 	BlackBars black_bars;

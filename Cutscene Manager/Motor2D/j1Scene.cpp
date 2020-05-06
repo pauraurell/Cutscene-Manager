@@ -65,10 +65,15 @@ bool j1Scene::Update(float dt)
 
 	iPoint player = App->characters->player_pos;
 
+	if (!App->render->cinematic_camera.active)
+	{
+		App->render->camera.x = -player.x + App->win->width / 2;
+		App->render->camera.y = -player.y + App->win->height / 2;
+		SceneLimits();
+	}
 	//Camera following the player and limits
-	App->render->camera.x = -player.x + App->win->width / 2;
-	App->render->camera.y = -player.y + App->win->height / 2;
-	SceneLimits();
+
+
 
 	//Draw the map
 	App->map->Draw();
@@ -87,6 +92,11 @@ bool j1Scene::Update(float dt)
 	else if (App->input->GetKey(SDL_SCANCODE_F3) == KEY_DOWN)
 	{
 		App->cutscene_manager->StartCutscene("test3");
+	}
+
+	else if (App->input->GetKey(SDL_SCANCODE_F4) == KEY_DOWN)
+	{
+		App->cutscene_manager->StartCutscene("test4");
 	}
 
 	if (player.x > 230 && player.x < 265) 

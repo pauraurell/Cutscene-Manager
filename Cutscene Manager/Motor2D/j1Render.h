@@ -4,7 +4,9 @@
 #include "SDL/include/SDL.h"
 #include "p2Point.h"
 #include "j1Module.h"
+#include "j1CutsceneManager.h"
 
+struct CutsceneObject;
 
 enum RENDER_PIVOT
 {
@@ -59,6 +61,7 @@ public:
 	iPoint j1Render::ScreenToWorld(int x, int y) const;
 	iPoint WorldToScreen(int x, int y) const;
 
+	void CutsceneListener();
 
 public:
 
@@ -66,8 +69,10 @@ public:
 	SDL_Rect		camera;
 	SDL_Rect		viewport;
 	SDL_Color		background;
+	iPoint camera_pos;
 
-	
+	CutsceneObject cinematic_camera;
+
 	
 private:
 	bool shaking = false;

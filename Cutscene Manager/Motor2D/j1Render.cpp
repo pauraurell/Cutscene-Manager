@@ -69,7 +69,9 @@ bool j1Render::Start()
 
 	// back background
 	SDL_RenderGetViewport(renderer, &viewport);
-	
+	camera_pos.x = 0;
+	camera_pos.y = 0;
+
 	return true;
 }
 
@@ -85,6 +87,10 @@ bool j1Render::PreUpdate(float dt)
 bool j1Render::Update(float dt)
 {
 	BROFILER_CATEGORY("Update_Render", Profiler::Color::Aquamarine);
+
+	camera.x = camera_pos.x;
+	camera.y = camera_pos.y;
+	CutsceneListener();
 
 	if (shaking)
 		UpdateCameraShake();
@@ -372,4 +378,13 @@ iPoint j1Render::WorldToScreen(int x, int y) const
 	ret.x = x + camera.x / scale;
 	ret.y = y + camera.y / scale;
 	return ret;
+}
+
+
+void j1Render::CutsceneListener() 
+{
+	if (cinematic_camera.active)
+	{
+		App->cutscene_manager->DoCutscene(cinematic_camera, camera_pos);
+	}
 }
