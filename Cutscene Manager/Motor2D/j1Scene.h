@@ -41,6 +41,8 @@ public:
 	// Check camera and player limits
 	void SceneLimits();
 
+	iPoint camera_limit;
+
 
 public:
 	p2SString current_level;

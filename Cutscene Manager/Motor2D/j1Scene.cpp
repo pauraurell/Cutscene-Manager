@@ -42,7 +42,7 @@ bool j1Scene::Start()
 {
 	LOG("Start scene");
 
-	current_level = "map.tmx";
+	current_level = "TestMap.tmx";
 	map_coordinates = { 0, 0 };
 
 	App->map->Load(current_level.GetString());
@@ -67,11 +67,16 @@ bool j1Scene::Update(float dt)
 
 	if (!App->render->cinematic_camera.active)
 	{
+		//Camera following the player and limits
 		App->render->camera.x = -player.x + App->win->width / 2;
 		App->render->camera.y = -player.y + App->win->height / 2;
 		SceneLimits();
 	}
-	//Camera following the player and limits
+
+
+	//TODO 6: Now we just have to start the cutscene that we want if it is in a certain position. To do that we will see
+	// if the player is on a certain tile we will define in the Tiled map. The layers and properties are allready done and 
+	// properly loaded in map.cpp so you just have to touch this module.
 
 	iPoint MapPos;
 	list<MapLayer*>::iterator Layer_list;
@@ -80,13 +85,21 @@ bool j1Scene::Update(float dt)
 	for (Layer_list = App->map->data.layers.begin(); Layer_list != App->map->data.layers.end(); ++Layer_list)
 	{
 		layer = *Layer_list;
-		if (layer->returnPropValue("CutsceneTrigger") == 1) 
+		MapPos = App->map->WorldToMap(App->characters->player_pos.x, App->characters->player_pos.y);
+		if (layer->Get(MapPos.x, MapPos.y) == 2)
 		{
-			MapPos = App->map->WorldToMap(App->characters->player_pos.x, App->characters->player_pos.y);
-			if (layer->Get(MapPos.x, MapPos.y) != 0)
+			if (layer->returnPropValue("Cutscene") == 1) 
+			{
+				App->cutscene_manager->StartCutscene("test1");
+			}		
+			else if (layer->returnPropValue("Cutscene") == 2)
 			{
 				App->cutscene_manager->StartCutscene("test2");
-			}			
+			}
+			else if (layer->returnPropValue("Cutscene") == 3)
+			{
+				App->cutscene_manager->StartCutscene("test3");
+			}
 		}
 	}
 
@@ -144,16 +157,6 @@ void j1Scene::SceneLimits()
 	else if (App->render->camera.x < camera_limit.x) { App->render->camera.x = camera_limit.x; }
 	if (App->render->camera.y > 0) { App->render->camera.y = 0; }
 	else if (App->render->camera.y < camera_limit.y) { App->render->camera.y = camera_limit.y; }
-
-	//Player Limits
-	/*iPoint player_limit;
-	player_limit.x = App->map->data.width * App->map->data.tile_width - 32;
-	player_limit.y = App->map->data.height * App->map->data.tile_height - 48;
-
-	if (App->characters->player.x < 0) { App->characters->player.x = 0; }
-	else if (App->characters->player.x > player_limit.x) { App->characters->player.x = player_limit.x; }
-	if (App->characters->player.y < 0) { App->characters->player.y = 0; }
-	else if (App->characters->player.y > player_limit.y) { App->characters->player.y = player_limit.y; }*/
 }
 
 

@@ -29,7 +29,6 @@ struct CutsceneObject
 	Step current_step;
 	bool active;
 
-	//Pass to the next step of the cutsecne
 	void UpdateStep();
 };
 

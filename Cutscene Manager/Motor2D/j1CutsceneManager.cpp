@@ -28,12 +28,12 @@ bool j1CutsceneManager::Start()
 	int bar_height = 100;
 
 	black_bars.top_rect.x = 0;
-	black_bars.top_rect.y = -bar_height;
+	black_bars.top_rect.y = 0;
 	black_bars.top_rect.w = App->win->width;
 	black_bars.top_rect.h = bar_height;
 
 	black_bars.down_rect.x = 0;
-	black_bars.down_rect.y = App->win->height;
+	black_bars.down_rect.y = App->win->height - bar_height;
 	black_bars.down_rect.w = App->win->width;
 	black_bars.down_rect.h = bar_height;
 
@@ -80,23 +80,22 @@ bool j1CutsceneManager::CleanUp()
 
 void BlackBars::FadeIn()
 {
+	//TODO 5.2: Complete this function doing a smooth fade in raising the value of the alpha (alpha = 0: invisible, alpha = 255: Completely black)
 	alpha += 3;
-	top_rect.y++;
-	down_rect.y--;
 	Draw();
 	if (alpha >= 255) { alpha = 255;   fase = Drawing; }
 }
 
 void BlackBars::Draw()
 {
-	top_rect.y = 0;
-	down_rect.y = App->win->height - 100;
+	//TODO 5.1: Draw both quads unsing the alpha variable. Both rects are (top_rect and down_rect) already created, you just have to draw them.
 	App->render->DrawQuad(top_rect, 0, 0, 0, alpha, true, false);
 	App->render->DrawQuad(down_rect, 0, 0, 0, alpha, true, false);
 }
 
 void BlackBars::FadeOut()
 {
+	//TODO 5.2: Similar to fade out
 	alpha -= 3;
 	Draw();
 	if (alpha == 0) { alpha = 0; fase = None; }
@@ -124,6 +123,9 @@ void j1CutsceneManager::StartCutscene(string name)
 
 bool j1CutsceneManager::LoadSteps(pugi::xml_node node)
 {
+	//TODO 1: Check the structure of the Cutscene Editor xml and fill this function. You just have to get the attributes from
+	// the xml and push the step to the list of the correspondent Cutscene Object depending on its objective and set the active 
+	// bool to true of each loaded Cutscene Object.
 	Step* s = new Step;
 
 	for (pugi::xml_node step = node.child("step"); step; step = step.next_sibling("step"))
@@ -171,10 +173,13 @@ void j1CutsceneManager::DoCutscene(CutsceneObject& character, iPoint& objective_
 	{
 		Movement(step, objective_position); 
 
+		//TODO 4: This todo is very easy, just check if the object position is equal to the last position of the cutscene and if it 
+		// is call the FinishCutscene function. If it has reached the step.position but it is not the last one just call the Update step 
+		// function you've just made right before.
+		
 		if (step.position == character.steps.front().position)
 		{
 			FinishCutscene(character);
-			
 		}
 		else 
 		{
@@ -189,6 +194,9 @@ void j1CutsceneManager::DoCutscene(CutsceneObject& character, iPoint& objective_
 
 void j1CutsceneManager::Movement(Step& step, iPoint& objective_position)
 {
+	//TODO 2: Now we want to move the object to the destiny point. To do that compare the object postion with the position
+	// we want to reach and move it with the speed values.
+
 	if (step.position.x > objective_position.x)
 	{
 		if (step.position.x - objective_position.x > step.speed.x)
@@ -229,6 +237,9 @@ void j1CutsceneManager::Movement(Step& step, iPoint& objective_position)
 
 void CutsceneObject::UpdateStep()
 {
+	//TODO 3: Now that the object will move wherever we want, we have to call this function every time the object reaches a point.
+	// To do this, in this function you just have to update the current_step value with the next step in the list.
+
 	current_step.position.x = steps.back().position.x;
 	current_step.position.y = steps.back().position.y;
 	current_step.speed.x = steps.back().speed.x;
@@ -242,6 +253,7 @@ void CutsceneObject::UpdateStep()
 
 void j1CutsceneManager::FinishCutscene(CutsceneObject& character)
 {
+	character.steps.clear();
 	character.active = false;
 	App->characters->input = true;
 

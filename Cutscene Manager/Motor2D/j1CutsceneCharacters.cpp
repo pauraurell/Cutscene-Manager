@@ -26,8 +26,8 @@ bool j1CutsceneCharacters::Start()
 	player_pos.x = 84;
 	player_pos.y = 520;
 
-	character1_pos.x = -50;
-	character1_pos.y = 520;
+	character1_pos.x = 1700;
+	character1_pos.y = 526;
 
 	character2_pos.x = 1500;
 	character2_pos.y = 520;
@@ -94,8 +94,8 @@ void j1CutsceneCharacters::CutsceneListener()
 	}
 	else 
 	{
-		character1_pos.x = -50;
-		character1_pos.y = 520;
+		character1_pos.x = 1700;
+		character1_pos.y = 526;
 	} 
 
 	if (character2.active)

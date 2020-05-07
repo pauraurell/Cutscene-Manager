@@ -4,85 +4,95 @@
   
   <cutscene 
     name="test1">
-    <step 
-      objective="player" x="760" y="526" vel_x="2" vel_y="2">
-    </step>
-    <step 
-      objective="player" x="834" y="500" vel_x="2" vel_y="2">
-    </step>
-    <step 
-      objective="player" x="834" y="-50" vel_x="2" vel_y="2">
-    </step>
     <step
-      objective="character1" x="1500" y="526" vel_x="2" vel_y="2">
-    </step>
-
+      objective="player" x="950" y="526" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="950" y="510" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="950" y="502" vel_x="2" vel_y="1"></step>
+    <step
+      objective="player" x="950" y="510" vel_x="2" vel_y="1"></step>
+    <step
+      objective="player" x="950" y="526" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="900" y="487" vel_x="1" vel_y="1"></step>
+    <step
+      objective="player" x="830" y="487" vel_x="1" vel_y="1"></step>
+    <step
+      objective="player" x="835" y="-50" vel_x="1" vel_y="1"></step>
+    <step
+      objective="character1" x="1400" y="526" vel_x="1" vel_y="1"></step>
+    <step
+      objective="character1" x="1080" y="526" vel_x="2" vel_y="2"> </step>
+    <step
+      objective="character1" x="1080" y="510" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1080" y="502" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1080" y="510" vel_x="1" vel_y="1"></step>
+    <step
+      objective="character1" x="950" y="526" vel_x="2" vel_y="1"></step>
+    <step
+      objective="character1" x="840" y="-50" vel_x="1" vel_y="1"></step>
+    <step
+      objective="character1" x="840" y="-50" vel_x="1" vel_y="1"></step>
   </cutscene>
+  
+  
+  
   
   <cutscene
       name="test2">
     <step
-      objective="player" x="660" y="526" vel_x="2" vel_y="2">
-    </step>
+      objective="player" x="660" y="526" vel_x="2" vel_y="2"></step>    
     <step
-      objective="player" x="660" y="510" vel_x="2" vel_y="2">
-    </step>
+      objective="player" x="660" y="510" vel_x="2" vel_y="2"></step>    
     <step
-      objective="player" x="660" y="502" vel_x="2" vel_y="1">
-    </step>
+      objective="player" x="660" y="502" vel_x="2" vel_y="1"></step>    
     <step
-      objective="player" x="660" y="510" vel_x="2" vel_y="1">
-    </step>
+      objective="player" x="660" y="510" vel_x="2" vel_y="1"></step>    
     <step
-      objective="player" x="-50" y="526" vel_x="3" vel_y="2">
-    </step>
+      objective="player" x="-50" y="526" vel_x="3" vel_y="2"></step>   
     <step
-      objective="character2" x="1300" y="530" vel_x="1" vel_y="1">
-    </step>
+      objective="character2" x="1300" y="530" vel_x="1" vel_y="1"></step>
     <step
-      objective="character2" x="640" y="530" vel_x="3" vel_y="2">
-    </step>
+      objective="character2" x="640" y="530" vel_x="3" vel_y="2"></step>
     <step
-      objective="character2" x="-50" y="530" vel_x="4" vel_y="2">
-    </step>
+      objective="character2" x="-50" y="530" vel_x="4" vel_y="2"></step>
   </cutscene>
 
+  
+  
+  
   <cutscene
     name="test3">
     <step
-      objective="player" x="300" y="550" vel_x="1" vel_y="2">
-    </step>
+      objective="player" x="300" y="550" vel_x="1" vel_y="2"></step>
     <step
-      objective="player" x="600" y="100" vel_x="2" vel_y="3">
-    </step>
+      objective="player" x="600" y="100" vel_x="2" vel_y="3"></step>
     <step
-      objective="player" x="300" y="500" vel_x="1" vel_y="1">
-    </step>
+      objective="player" x="300" y="500" vel_x="1" vel_y="1"></step>
     <step
-      objective="player" x="100" y="200" vel_x="3" vel_y="2">
-    </step>
+      objective="player" x="100" y="200" vel_x="3" vel_y="2"></step>   
     <step
-      objective="player" x="500" y="700" vel_x="2" vel_y="4">
-    </step>
+      objective="player" x="500" y="700" vel_x="2" vel_y="4"></step>
   </cutscene>
 
+  
+  
+  
   <cutscene
      name="test4">
     <step
-      objective="camera" x="-300" y="-550" vel_x="1" vel_y="2">
-    </step>
+      objective="camera" x="-300" y="-550" vel_x="1" vel_y="2"></step>    
     <step
-      objective="camera" x="600" y="100" vel_x="2" vel_y="3">
-    </step>
+      objective="camera" x="600" y="100" vel_x="2" vel_y="3"></step>    
     <step
-      objective="camera" x="300" y="500" vel_x="1" vel_y="1">
-    </step>
+      objective="camera" x="300" y="500" vel_x="1" vel_y="1"></step>    
     <step
-      objective="camera" x="100" y="200" vel_x="3" vel_y="2">
-    </step>
+      objective="camera" x="100" y="200" vel_x="3" vel_y="2"></step>    
     <step
-      objective="camera" x="500" y="700" vel_x="2" vel_y="4">
-    </step>
+      objective="camera" x="500" y="700" vel_x="2" vel_y="4"></step>    
   </cutscene>
 
 </CutsceneEditor>
