@@ -110,5 +110,19 @@ To add a Pre-rendered cutscene in our video game we just have to make a video fi
 There are game engines with tools that allows us to create cutscenes. For example in Unity we have the Cinemachine tool for free that is really usefull for camera movements and transitions or Cinema Director which is not free that allows you to do more complex cutscenes. 
 Unreal Engine has a cutscene tool too, it is called Matinee and it's very similar to Cinema Director in Unity, it allows you to animate actors over time using a timeline and key frames.
 
-# Exercise
-Here are some TODO's:
+# Code Implementation
+
+The objective of this project is to create a basic Cutscene Editor so we can make cutscenes in our 2d Motor. For this basic implementation the cutscenes just move actors from a place to another and shows black bars. We will read the coordinates from a xml so it is really easy to edit a cutscene or create a new one. With this system we can start a cutscene whenever we want or when the player is in a certain position that we will get from the Map tmx.
+
+We will have a module that will handle all the neccesary things to create cutscenes, load them, finish them... In this new module we will have 3 new structs. Every cutscene is divided by steps. A step is just a position and a speed for an object. 
+
+Then, every object involved in a cutscene will have a list of steps, the current step and a bool to indicate if it is active so we can disable the cutscene later. A cutscene object has also a function that updates the current step if it arrives to the desiny point.
+
+The last one is the Black Bars struct.
+
+As this is a generic approach, in this project there isn't a entity manager or ui elements or sprites/animations so our "characters" or cutscene objects will be as simple as squares created with the DrawQuad function. So the "characters" just have a iPoint position and the CutsceneObject struct.
+
+## Exercice
+
+
+
