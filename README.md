@@ -2,9 +2,10 @@ Hi, I'm [Pau Raurell](https://github.com/pauraurell) and welcome to my Cutscene 
 
 ### What content can you find here?
 
-* [What is a cutscene?](https://pauraurell.github.io/Cutscene-Manager/#What-is-a-cutscene?)
-* [Types of cutscenes](https://pauraurell.github.io/Cutscene-Manager/#Types-of-cutscenes)
-* [Exercise](https://pauraurell.github.io/Cutscene-Manager/#Exercise)
+* What is a cutscene)
+* Types of cutscenes and its pros and cons
+* Cutscene Editors
+* Code Implementation
 
 
 # What is a cutscene?
@@ -66,7 +67,7 @@ This type of cutscenes are scenes that are already loaded and rendered when the 
 
 ### Real time cutscenes
 
-In the real time cutscenes, what the player sees is being rendered in that moment and obviously these type of cutscenes are made with the game engine.&nbsp;
+In the real time cutscenes, what the player sees is being rendered in that moment and obviously these type of cutscenes are made with the game engine. This type is common in cutscenes like conversation or cutscenes that don't take a long, but can be used everywhere.
  
 ![pre](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/Red%20Dead%20Redemption%202%20real%20time%20cutscene.gif?raw=true)
 
@@ -131,16 +132,34 @@ As this is a generic approach, in this project there isn't a entity manager or u
 
 ## Exercice
 
+You can download the excercice here. You will find 6 TODOs and if you complete them all you will be able to create in-game cutscenes in which are the number of actors you want and you will be able to read a trigger tile from the tiled map. The result should be something like this:
+
 ## Exercice Solution
 
 TODO 1: The first thing we want to do is reading the xml and store the value of each step in the correspondent step list. To do that you have to do a for loop iterating all the steps of the cutscene and push each step into the list of the objective. 
 
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%201%20WEB.PNG?raw=true)
+
 TODO 2: In the second todo we have to move the objective of the cutscene to the position of the current step. The Movement function will look where is the object respect to the step position and will move the speed value for pixel. 
+
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%202%20WEB.PNG?raw=true)
 
 TODO 3: This function just updates the step values with the next ones in the list, then pop the last one so the cutscene keep going.
 
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%203%20WEB.PNG?raw=true)
+
 TODO 4: Here we just have to check if the object reached its objective to call UpdateStep. If the position reached is the final one call the FinishCutscene function.
+
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%204%20WEB.PNG?raw=true)
 
 TODO 5: A simple way to do the fade in and out:
 
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%205%20WEB.PNG?raw=true)
+
 TODO 6: To get the tile in which we want to call StartCutscene we have to do a for loop iterating all layers to see if the layer has a cutscene trigger property. Then we want to see if the player is in that tile, and to do that we will see if the tile id is equal to the gid we are looking for, in our case is 2 because it is the second tile in the tilemap. Finally we will start the cutscene desired.
+
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%206%20WEB.PNG?raw=true)
+
+## Further improvements
+
+This is just a base of code and a lot of improvements could be made. For example you could add a audio atributte in the xml or a wait time attribute to let a object stay in a position while the rest of the cutscene is playing. The black bars effect could be improved a little bit by doing the fade in/out smoother.
