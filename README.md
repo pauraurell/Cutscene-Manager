@@ -116,9 +116,16 @@ The objective of this project is to create a basic Cutscene Editor so we can mak
 
 We will have a module that will handle all the neccesary things to create cutscenes, load them, finish them... In this new module we will have 3 new structs. Every cutscene is divided by steps. A step is just a position and a speed for an object. 
 
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Step.PNG?raw=true)
+
 Then, every object involved in a cutscene will have a list of steps, the current step and a bool to indicate if it is active so we can disable the cutscene later. A cutscene object has also a function that updates the current step if it arrives to the desiny point.
 
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Object.PNG?raw=true)
+
 The last one is the Black Bars struct.
+
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Bars.PNG?raw=true)
+
 
 As this is a generic approach, in this project there isn't a entity manager or ui elements or sprites/animations so our "characters" or cutscene objects will be as simple as squares created with the DrawQuad function. So the "characters" just have a iPoint position and the CutsceneObject struct.
 
