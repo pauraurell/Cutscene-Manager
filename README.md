@@ -131,5 +131,16 @@ As this is a generic approach, in this project there isn't a entity manager or u
 
 ## Exercice
 
+## Exercice Solution
 
+TODO 1: The first thing we want to do is reading the xml and store the value of each step in the correspondent step list. To do that you have to do a for loop iterating all the steps of the cutscene and push each step into the list of the objective. 
 
+TODO 2: In the second todo we have to move the objective of the cutscene to the position of the current step. The Movement function will look where is the object respect to the step position and will move the speed value for pixel. 
+
+TODO 3: This function just updates the step values with the next ones in the list, then pop the last one so the cutscene keep going.
+
+TODO 4: Here we just have to check if the object reached its objective to call UpdateStep. If the position reached is the final one call the FinishCutscene function.
+
+TODO 5: A simple way to do the fade in and out:
+
+TODO 6: To get the tile in which we want to call StartCutscene we have to do a for loop iterating all layers to see if the layer has a cutscene trigger property. Then we want to see if the player is in that tile, and to do that we will see if the tile id is equal to the gid we are looking for, in our case is 2 because it is the second tile in the tilemap. Finally we will start the cutscene desired.
