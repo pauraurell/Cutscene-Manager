@@ -3,7 +3,7 @@
 #include "j1App.h"
 #include "j1Input.h"
 #include "j1Textures.h"
-#include "j1Audio.h"
+#include "j1Scene.h"
 #include "j1Render.h"
 #include "j1Window.h"
 #include "j1CutsceneCharacters.h"
@@ -104,7 +104,7 @@ void BlackBars::FadeOut()
 
 void j1CutsceneManager::StartCutscene(string name)
 {
-	if (!App->characters->player.active)
+	if (!SomethingActive())
 	{
 		for (pugi::xml_node cutscene = cutsceneManager.child("cutscene"); cutscene; cutscene = cutscene.next_sibling("cutscene"))
 		{
@@ -169,7 +169,6 @@ void j1CutsceneManager::DoCutscene(CutsceneObject& character, iPoint& objective_
 
 	if(character.active)
 	{
-		
 		Movement(step, objective_position); 
 
 		if (step.position == character.steps.front().position)
@@ -247,4 +246,12 @@ void j1CutsceneManager::FinishCutscene(CutsceneObject& character)
 	App->characters->input = true;
 
 	if (black_bars.fase == Drawing) { black_bars.fase = FadeOut; }
+}
+
+bool j1CutsceneManager::SomethingActive()
+{
+	bool ret;
+	if (App->characters->player.active || App->characters->character1.active || App->characters->character2.active){ret = true;}
+	else { ret = false; }
+	return ret;
 }

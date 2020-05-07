@@ -86,7 +86,7 @@ public:
 	//Finish the cutscene
 	void FinishCutscene(CutsceneObject& character);
 
-	void CameraMovement(Step& step);
+	bool SomethingActive();
 	
 public:
 
