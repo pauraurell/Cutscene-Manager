@@ -103,6 +103,10 @@ Quick time events are a type of cutscene where the player has to press a button 
 
 To add a Pre-rendered cutscene in our video game we just have to make a video file with the cutscene we want. There is a lot of programs that allows us to do this, for example a pre-rendered cutscene could be made with After Effects, Adobe Premiere or even Toon Boom for simple and short cutscenes. But what really interests us is how to make real time cutscenes. 
 
+
+![unity](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/unity.png?raw=true)
+![unreal](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/unreal.png?raw=true)
+
 There are game engines with tools that allows us to create cutscenes. For example in Unity we have the Cinemachine tool for free that is really usefull for camera movements and transitions or Cinema Director which is not free that allows you to do more complex cutscenes. 
 Unreal Engine has a cutscene tool too, it is called Matinee and it's very similar to Cinema Director in Unity, it allows you to animate actors over time using a timeline and key frames.
 
