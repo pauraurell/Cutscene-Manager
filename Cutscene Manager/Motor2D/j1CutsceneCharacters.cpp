@@ -92,10 +92,21 @@ void j1CutsceneCharacters::CutsceneListener()
 	{
 		App->cutscene_manager->DoCutscene(character1, character1_pos);
 	}
+	else 
+	{
+		character1_pos.x = -50;
+		character1_pos.y = 520;
+	} 
 
 	if (character2.active)
 	{
 		App->cutscene_manager->DoCutscene(character2, character2_pos);
+	}
+	
+	else
+	{
+		character2_pos.x = 1500;
+		character2_pos.y = 520;
 	}
 }
 
