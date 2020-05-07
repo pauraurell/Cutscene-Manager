@@ -28,11 +28,13 @@ struct CutsceneObject
 	list <Step> steps;
 	Step current_step;
 	bool active;
+
+	//Pass to the next step of the cutsecne
+	void UpdateStep();
 };
 
-class BlackBars
+struct BlackBars
 {
-public:
 	int alpha;
 	SDL_Rect top_rect, down_rect;
 	BlackBarsFases fase;
@@ -78,10 +80,6 @@ public:
 
 	//Update positions
 	void Movement(Step& step, iPoint& objective_position);
-
-
-	//Pass to the next step of the cutsecne
-	void UpdateStep(CutsceneObject& character);
 
 	//Finish the cutscene
 	void FinishCutscene(CutsceneObject& character);

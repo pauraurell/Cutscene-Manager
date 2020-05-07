@@ -87,7 +87,6 @@ bool j1Scene::Update(float dt)
 			{
 				App->cutscene_manager->StartCutscene("test2");
 			}			
-			
 		}
 	}
 

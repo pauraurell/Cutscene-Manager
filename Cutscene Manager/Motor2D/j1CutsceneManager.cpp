@@ -115,10 +115,10 @@ void j1CutsceneManager::StartCutscene(string name)
 				if (black_bars.fase == None) { black_bars.fase = FadeIn; }
 			}
 		}
-		if (App->characters->player.active) { UpdateStep(App->characters->player); }
-		if (App->characters->character1.active) { UpdateStep(App->characters->character1); }
-		if (App->characters->character2.active) { UpdateStep(App->characters->character2); }
-		if (App->render->cinematic_camera.active) { UpdateStep(App->render->cinematic_camera); }
+		if (App->characters->player.active) {App->characters->player.UpdateStep(); }
+		if (App->characters->character1.active) {App->characters->character1.UpdateStep(); }
+		if (App->characters->character2.active) { App->characters->character2.UpdateStep(); }
+		if (App->render->cinematic_camera.active) { App->render->cinematic_camera.UpdateStep(); }
 	}
 }
 
@@ -180,7 +180,7 @@ void j1CutsceneManager::DoCutscene(CutsceneObject& character, iPoint& objective_
 		{
 			if (step.position == objective_position)
 			{
-				UpdateStep(character);
+				character.UpdateStep();
 			}
 		}
 	}
@@ -227,16 +227,16 @@ void j1CutsceneManager::Movement(Step& step, iPoint& objective_position)
 }
 
 
-void j1CutsceneManager::UpdateStep(CutsceneObject& character)
+void CutsceneObject::UpdateStep()
 {
-	character.current_step.position.x = character.steps.back().position.x;
-	character.current_step.position.y = character.steps.back().position.y;
-	character.current_step.speed.x = character.steps.back().speed.x;
-	character.current_step.speed.y = character.steps.back().speed.y;
+	current_step.position.x = steps.back().position.x;
+	current_step.position.y = steps.back().position.y;
+	current_step.speed.x = steps.back().speed.x;
+	current_step.speed.y = steps.back().speed.y;
 
-	if (character.steps.size() > 0) 
+	if (steps.size() > 0) 
 	{
-		character.steps.pop_back();
+		steps.pop_back();
 	}
 }
 
