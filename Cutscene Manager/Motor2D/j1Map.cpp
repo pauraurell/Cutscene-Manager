@@ -485,6 +485,12 @@ bool j1Map::LoadProperties(pugi::xml_node& node,Properties property[])
 				property[i].prop.fvalue = layer.attribute("value").as_float();
 				i++;
 			}
+
+			if (property[i].name == "CutsceneTrigger") {
+				property[i].prop.ivalue = layer.attribute("value").as_int();
+				i++;
+			}
+
 			
 	}
 

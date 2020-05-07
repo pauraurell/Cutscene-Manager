@@ -73,7 +73,23 @@ bool j1Scene::Update(float dt)
 	}
 	//Camera following the player and limits
 
+	iPoint MapPos;
+	list<MapLayer*>::iterator Layer_list;
+	MapLayer* layer;
 
+	for (Layer_list = App->map->data.layers.begin(); Layer_list != App->map->data.layers.end(); ++Layer_list)
+	{
+		layer = *Layer_list;
+		if (layer->returnPropValue("CutsceneTrigger") == 1) 
+		{
+			MapPos = App->map->WorldToMap(App->characters->player_pos.x, App->characters->player_pos.y);
+			if (layer->Get(MapPos.x, MapPos.y) != 0)
+			{
+				App->cutscene_manager->StartCutscene("test2");
+			}			
+			
+		}
+	}
 
 	//Draw the map
 	App->map->Draw();
@@ -97,14 +113,6 @@ bool j1Scene::Update(float dt)
 	else if (App->input->GetKey(SDL_SCANCODE_F4) == KEY_DOWN)
 	{
 		App->cutscene_manager->StartCutscene("test4");
-	}
-
-	if (player.x > 230 && player.x < 265) 
-	{
-		if (player.y > 515 && player.y < 570)
-		{
-			App->cutscene_manager->StartCutscene("test2");
-		}
 	}
 
 	return true;

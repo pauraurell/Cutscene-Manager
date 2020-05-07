@@ -6,7 +6,7 @@
 #include "j1Module.h"
 #include <list>
 
-#define MAX_PROPERTIES 3
+#define MAX_PROPERTIES 4
 
 using namespace std;
 

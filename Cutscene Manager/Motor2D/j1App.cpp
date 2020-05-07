@@ -214,9 +214,9 @@ void j1App::FinishUpdate()
 
 	static char title[256];
 
-	sprintf_s(title, 256, "Cutscene Manager   ||   FPS: %i   ||   Player Position: (%i, %i)   ||   Camera Position: (%i, %i)   ||   C1 Position : (% i, % i)   ||   C2 Position : (% i, % i)",
-	prev_last_sec_frame_count, App->characters->player_pos.x, App->characters->player_pos.y, App->render->camera.x, App->render->camera.y, App->characters->character1_pos.x,
-		App->characters->character1_pos.y, App->characters->character2_pos.x, App->characters->character2_pos.y);
+	sprintf_s(title, 256, "Cutscene Manager   ||   FPS: %i   ||   Player Position: (%i, %i)   ||   C1 Position : (% i, % i)   ||   C2 Position : (% i, % i)",
+	prev_last_sec_frame_count, App->characters->player_pos.x, App->characters->player_pos.y, App->characters->character1_pos.x,
+	App->characters->character1_pos.y, App->characters->character2_pos.x, App->characters->character2_pos.y);
 
 
 	App->win->SetTitle(title);
