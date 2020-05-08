@@ -104,12 +104,16 @@ Quick time events are a type of cutscene where the player has to press a button 
 
 To add a Pre-rendered cutscene in our video game we just have to make a video file with the cutscene we want. There is a lot of programs that allows us to do this, for example a pre-rendered cutscene could be made with After Effects, Adobe Premiere or even Toon Boom for simple and short cutscenes. But what really interests us is how to make real time cutscenes. 
 
-
 ![unity](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/unity.png?raw=true)
-![unreal](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/unreal.png?raw=true)
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Cinema%20Director.PNG?raw=true)
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Cinemachine.PNG?raw=true)
 
 There are game engines with tools that allows us to create cutscenes. For example in Unity we have the Cinemachine tool for free that is really usefull for camera movements and transitions or Cinema Director which is not free that allows you to do more complex cutscenes. 
 Unreal Engine has a cutscene tool too, it is called Matinee and it's very similar to Cinema Director in Unity, it allows you to animate actors over time using a timeline and key frames.
+
+![unreal](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/unreal.png?raw=true)
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Matinee.PNG?raw=true)
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Sequencer.PNG?raw=true)
 
 # Code Implementation
 
@@ -133,6 +137,12 @@ As this is a generic approach, in this project there isn't a entity manager or u
 ## Exercice
 
 You can download the excercice here. You will find 6 TODOs and if you complete them all you will be able to create in-game cutscenes in which are the number of actors you want and you will be able to read a trigger tile from the tiled map. The result should be something like this:
+
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/SampleCutscene1.gif?raw=true)
+
+## Further improvements
+
+This is just a base of code and a lot of improvements could be made. For example you could add a audio atributte in the xml or a wait time attribute to let a object stay in a position while the rest of the cutscene is playing. The black bars effect could be improved a little bit by doing the fade in/out smoother.
 
 ## Exercice Solution
 
@@ -160,6 +170,3 @@ TODO 6: To get the tile in which we want to call StartCutscene we have to do a f
 
 ![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/TODO%206%20WEB.PNG?raw=true)
 
-## Further improvements
-
-This is just a base of code and a lot of improvements could be made. For example you could add a audio atributte in the xml or a wait time attribute to let a object stay in a position while the rest of the cutscene is playing. The black bars effect could be improved a little bit by doing the fade in/out smoother.
