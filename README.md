@@ -134,6 +134,10 @@ The last one is the Black Bars struct.
 
 As this is a generic approach, in this project there isn't a entity manager or ui elements or sprites/animations so our "characters" or cutscene objects will be as simple as squares created with the DrawQuad function. So the "characters" just have a iPoint position and the CutsceneObject struct.
 
+This is a little flowchart to show how a cutscene goes:
+
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/Flowchart.PNG)
+
 ## Exercice
 
 You can download the excercice here. You will find 6 TODOs and if you complete them all you will be able to create in-game cutscenes in which are the number of actors you want and you will be able to read a trigger tile from the tiled map. The result should be something like this:
@@ -142,7 +146,7 @@ You can download the excercice here. You will find 6 TODOs and if you complete t
 
 ## Further improvements
 
-This is just a base of code and a lot of improvements could be made. For example you could add a audio atributte in the xml or a wait time attribute to let a object stay in a position while the rest of the cutscene is playing. The black bars effect could be improved a little bit by doing the fade in/out smoother.
+This is just a base of code and a lot of improvements could be made. For example you could add a audio atributte in the xml or a wait time attribute to let a object stay in a position while the rest of the cutscene is playing. The black bars effect could be improved a little bit by doing the fade in/out smoother and maybe create a function to do just camera cutscenes (travellings and camera movements that doesn't involve the player or any character)
 
 ## Exercice Solution
 
