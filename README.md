@@ -2,7 +2,7 @@ Hi, I'm [Pau Raurell](https://github.com/pauraurell) and welcome to my Cutscene 
 
 ### What content can you find here?
 
-* What is a cutscene)
+* What is a cutscene?
 * Types of cutscenes and its pros and cons
 * Cutscene Editors
 * Code Implementation
