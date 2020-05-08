@@ -1,4 +1,4 @@
-Hi, I'm [Pau Raurell](https://github.com/pauraurell) and welcome to my Cutscene Manager. This project has been made for the personal research assignment of the subject Project 2 in the [Video Game design and development Degree in CITM, UPC.](https://www.citm.upc.edu/ing/estudis/graus-videojocs/)
+Hi, I'm [Pau Raurell](https://github.com/pauraurell) and welcome to my Cutscene Manager. This project has been made for the personal research assignment of the subject Project 2 in the [Video Game design and development Degree in CITM, UPC.](https://www.citm.upc.edu/ing/estudis/graus-videojocs/), under supervision of lecturer [Marc Garrigó](<https://www.linkedin.com/in/mgarrigo/>).
 
 ### What content can you find here?
 
