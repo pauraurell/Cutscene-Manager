@@ -143,6 +143,8 @@ This is a little flowchart to show how a cutscene goes:
 You can download the excercice [here](https://github.com/pauraurell/Cutscene-Manager/releases). You will find 6 TODOs and if you complete them all you will be able to create in-game cutscenes in which are the number of actors you want and you will be able to read a trigger tile from the tiled map. The result should be something like this:
 
 ![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/SampleCutscene1.gif?raw=true)
+![](https://github.com/pauraurell/Cutscene-Manager/blob/master/docs/gifs/SampleCutscene2.gif?raw=true)
+
 
 ## Further improvements
 
