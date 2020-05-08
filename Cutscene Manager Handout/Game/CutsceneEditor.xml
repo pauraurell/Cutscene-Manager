@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CutsceneEditor>
+  
+  <cutscene 
+    name="test">
+    <step
+      objective="player" x="550" y="330" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="680" y="550" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="410" y="475" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="500" y="300" vel_x="2" vel_y="2"></step>
+  </cutscene>
+  
+  
+  <cutscene
+      name="SampleCutscene1">
+    <step
+      objective="player" x="232" y="723" vel_x="1" vel_y="1"></step>    
+    <step
+      objective="player" x="200" y="625" vel_x="2" vel_y="2"></step>    
+    <step
+      objective="player" x="240" y="589" vel_x="2" vel_y="2"></step>    
+    <step
+      objective="player" x="290" y="556" vel_x="2" vel_y="2"></step>    
+    <step
+      objective="player" x="368" y="550" vel_x="2" vel_y="2"></step>   
+    <step
+      objective="player" x="546" y="517" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="603" y="409" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="591" y="332" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="600" y="238" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="675" y="157" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="759" y="181" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="897" y="277" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="942" y="469" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="1086" y="511" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="1431" y="526" vel_x="3" vel_y="2"></step>
+    <step
+      objective="character2" x="267" y="820" vel_x="2" vel_y="1"></step>
+    <step
+      objective="character2" x="234" y="736" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="219" y="649" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="231" y="589" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="300" y="556" vel_x="3" vel_y="2"></step>
+    <step
+      objective="character2" x="495" y="511" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="612" y="517" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="645" y="388" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="618" y="283" vel_x="2" vel_y="3"></step>
+    <step
+      objective="character2" x="606" y="202" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="672" y="142" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="807" y="175" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="888" y="340" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="945" y="472" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="1005" y="502" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character2" x="1434" y="507" vel_x="2" vel_y="2"></step>
+  </cutscene>
+
+  
+  <cutscene
+    name="SampleCutscene2">
+    <step
+      objective="player" x="1170" y="511" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="1170" y="495" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="1170" y="489" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="1170" y="495" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="1170" y="511" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="966" y="502" vel_x="2" vel_y="2"></step>
+    <step
+      objective="player" x="921" y="427" vel_x="1" vel_y="2"></step>
+    <step
+      objective="player" x="891" y="310" vel_x="1" vel_y="2"></step>
+    <step
+      objective="player" x="861" y="178" vel_x="1" vel_y="2"></step>
+    <step
+      objective="player" x="867" y="-80" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1210" y="512" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1210" y="500" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1210" y="494" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1210" y="500" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1210" y="512" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="1004" y="513" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="932" y="472" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="912" y="397" vel_x="1" vel_y="2"></step>
+    <step
+      objective="character1" x="887" y="283" vel_x="2" vel_y="2"></step>
+    <step
+      objective="character1" x="869" y="-80" vel_x="2" vel_y="2"></step>
+
+  </cutscene>
+  
+</CutsceneEditor>
