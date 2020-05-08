@@ -26,11 +26,11 @@ bool j1CutsceneCharacters::Start()
 	player_pos.x = 84;
 	player_pos.y = 520;
 
-	character1_pos.x = 1700;
-	character1_pos.y = 526;
+	character1_pos.x = 1360;
+	character1_pos.y = 508;
 
-	character2_pos.x = 1500;
-	character2_pos.y = 520;
+	character2_pos.x = 300;
+	character2_pos.y = 900;
 
 	player.active = false;
 	character1.active = false;
@@ -64,7 +64,6 @@ bool j1CutsceneCharacters::Update(float dt)
 	App->render->DrawQuad({ character1_pos.x, character1_pos.y, 32, 32 }, 50, 200, 50, 255, true, true);
 	App->render->DrawQuad({ character2_pos.x, character2_pos.y, 46, 46 }, 250, 53, 8, 255, true, true);
 	
-
 	return true;
 }
 
@@ -94,8 +93,8 @@ void j1CutsceneCharacters::CutsceneListener()
 	}
 	else 
 	{
-		character1_pos.x = 1700;
-		character1_pos.y = 526;
+		character1_pos.x = 1360;
+		character1_pos.y = 508;
 	} 
 
 	if (character2.active)
@@ -105,8 +104,8 @@ void j1CutsceneCharacters::CutsceneListener()
 	
 	else
 	{
-		character2_pos.x = 1500;
-		character2_pos.y = 520;
+		character2_pos.x = 300;
+		character2_pos.y = 900;
 	}
 }
 

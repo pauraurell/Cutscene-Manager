@@ -65,14 +65,10 @@ bool j1Scene::Update(float dt)
 
 	iPoint player = App->characters->player_pos;
 
-	if (!App->render->cinematic_camera.active)
-	{
-		//Camera following the player and limits
-		App->render->camera.x = -player.x + App->win->width / 2;
-		App->render->camera.y = -player.y + App->win->height / 2;
-		SceneLimits();
-	}
-
+	//Camera following the player and limits
+	App->render->camera.x = -player.x + App->win->width / 2;
+	App->render->camera.y = -player.y + App->win->height / 2;
+	SceneLimits();
 
 	//TODO 6: Now we just have to start the cutscene that we want if it is in a certain position. To do that we will see
 	// if the player is on a certain tile we will define in the Tiled map. The layers and properties are allready done and 
@@ -90,15 +86,11 @@ bool j1Scene::Update(float dt)
 		{
 			if (layer->returnPropValue("Cutscene") == 1) 
 			{
-				App->cutscene_manager->StartCutscene("test1");
+				App->cutscene_manager->StartCutscene("SampleCutscene1");
 			}		
 			else if (layer->returnPropValue("Cutscene") == 2)
 			{
-				App->cutscene_manager->StartCutscene("test2");
-			}
-			else if (layer->returnPropValue("Cutscene") == 3)
-			{
-				App->cutscene_manager->StartCutscene("test3");
+				App->cutscene_manager->StartCutscene("SampleCutscene2");
 			}
 		}
 	}
@@ -109,24 +101,8 @@ bool j1Scene::Update(float dt)
 
 	if (App->input->GetKey(SDL_SCANCODE_F1) == KEY_DOWN)
 	{
-		App->cutscene_manager->StartCutscene("test1");
+		App->cutscene_manager->StartCutscene("test");
 	}
-
-	else if (App->input->GetKey(SDL_SCANCODE_F2) == KEY_DOWN)
-	{
-		App->cutscene_manager->StartCutscene("test2");
-	}
-
-	else if (App->input->GetKey(SDL_SCANCODE_F3) == KEY_DOWN)
-	{
-		App->cutscene_manager->StartCutscene("test3");
-	}
-
-	else if (App->input->GetKey(SDL_SCANCODE_F4) == KEY_DOWN)
-	{
-		App->cutscene_manager->StartCutscene("test4");
-	}
-
 	return true;
 }
 

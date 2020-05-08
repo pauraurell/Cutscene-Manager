@@ -88,8 +88,8 @@ bool j1Render::Update(float dt)
 {
 	BROFILER_CATEGORY("Update_Render", Profiler::Color::Aquamarine);
 
-	camera.x = camera_pos.x;
-	camera.y = camera_pos.y;
+	camera_pos.x = camera.x;
+	camera_pos.y = camera.y;
 	CutsceneListener();
 
 	if (shaking)
@@ -104,6 +104,9 @@ bool j1Render::PostUpdate(float dt)
 
 	SDL_SetRenderDrawColor(renderer, background.r, background.g, background.g, background.a);
 	SDL_RenderPresent(renderer);
+
+	camera.x = camera_pos.x;
+	camera.y = camera_pos.y;
 	return true;
 }
 
@@ -385,6 +388,6 @@ void j1Render::CutsceneListener()
 {
 	if (cinematic_camera.active)
 	{
-		App->cutscene_manager->DoCutscene(cinematic_camera, camera_pos);
+		App->cutscene_manager->DoCutscene(cinematic_camera, iPoint{camera.x, camera.y});
 	}
 }

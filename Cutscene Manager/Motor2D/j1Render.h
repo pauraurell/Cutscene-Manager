@@ -69,7 +69,7 @@ public:
 	SDL_Rect		camera;
 	SDL_Rect		viewport;
 	SDL_Color		background;
-	iPoint camera_pos;
+	iPoint          camera_pos;
 
 	CutsceneObject cinematic_camera;
 

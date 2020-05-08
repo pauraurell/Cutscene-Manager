@@ -80,7 +80,8 @@ bool j1CutsceneManager::CleanUp()
 
 void BlackBars::FadeIn()
 {
-	//TODO 5.2: Complete this function doing a smooth fade in raising the value of the alpha (alpha = 0: invisible, alpha = 255: Completely black)
+	//TODO 5.2: Complete this function doing a smooth fade in raising the value of the alpha 
+	// (alpha = 0: invisible, alpha = 255: Completely black)
 	alpha += 3;
 	Draw();
 	if (alpha >= 255) { alpha = 255;   fase = Drawing; }
@@ -88,7 +89,8 @@ void BlackBars::FadeIn()
 
 void BlackBars::Draw()
 {
-	//TODO 5.1: Draw both quads unsing the alpha variable. Both rects are (top_rect and down_rect) already created, you just have to draw them.
+	//TODO 5.1: Draw both quads unsing the alpha variable. Both rects are (top_rect and down_rect) already 
+	// created, you just have to draw them.
 	App->render->DrawQuad(top_rect, 0, 0, 0, alpha, true, false);
 	App->render->DrawQuad(down_rect, 0, 0, 0, alpha, true, false);
 }
@@ -165,13 +167,14 @@ bool j1CutsceneManager::LoadSteps(pugi::xml_node node)
 	return true;
 }
 
-void j1CutsceneManager::DoCutscene(CutsceneObject& character, iPoint& objective_position)
+void j1CutsceneManager::DoCutscene(CutsceneObject &character, iPoint &objective_position)
 {
 	Step step = character.current_step;
 
 	if(character.active)
 	{
-		Movement(step, objective_position); 
+
+		Movement(step, objective_position);
 
 		//TODO 4: This todo is very easy, just check if the object position is equal to the last position of the cutscene and if it 
 		// is call the FinishCutscene function. If it has reached the step.position but it is not the last one just call the Update step 
@@ -189,10 +192,9 @@ void j1CutsceneManager::DoCutscene(CutsceneObject& character, iPoint& objective_
 			}
 		}
 	}
-	
 }
 
-void j1CutsceneManager::Movement(Step& step, iPoint& objective_position)
+void j1CutsceneManager::Movement(Step &step, iPoint &objective_position)
 {
 	//TODO 2: Now we want to move the object to the destiny point. To do that compare the object postion with the position
 	// we want to reach and move it with the speed values.

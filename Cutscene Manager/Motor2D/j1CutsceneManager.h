@@ -83,6 +83,7 @@ public:
 	//Finish the cutscene
 	void FinishCutscene(CutsceneObject& character);
 
+	//Returns true if any cutscene object is active
 	bool SomethingActive();
 	
 public:
